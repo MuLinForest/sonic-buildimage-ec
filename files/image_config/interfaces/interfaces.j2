@@ -65,7 +65,7 @@ iface {{ port }} inet6 dhcp
 
 {% else %}
 {% if MGMT_INTERFACE %}
-{% for (name, prefix) in MGMT_INTERFACE|pfx_filter|unique(attribute=0) %}
+{% for (name, prefix) in MGMT_INTERFACE|pfx_filter|unique(attribute=0)|sort %}
 auto {{ name }}
 {% endfor %}
 {% for (name, prefix) in MGMT_INTERFACE|pfx_filter %}
