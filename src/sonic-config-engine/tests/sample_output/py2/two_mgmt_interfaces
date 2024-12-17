@@ -13,8 +13,8 @@ iface lo inet loopback
    pre-down ip addr add 127.0.0.1/8 dev lo
 
 # The management network interface
-auto eth1
 auto eth0
+auto eth1
 iface eth1 inet static
     address 10.0.10.100
     netmask 255.255.255.0
